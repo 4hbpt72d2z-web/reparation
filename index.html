@@ -1051,11 +1051,8 @@ async function submitForm() {
     document.getElementById('theForm').style.display = 'none';
     document.getElementById('successMsg').style.display = 'block';
 
-    // 2. OUVERTURE SMS DIRECT (Ton numéro)
-    // Le texte qui sera dans le SMS
+    // 2. OUVERTURE SMS DIRECT
     const corpsSMS = `Demande de réparation : ${fname}, ${device}, ${city}. Tel: ${phone}. Problème: ${problem}`;
-
-    // Commande pour ouvrir l'application SMS par défaut
     window.location.href = `sms:+14389259548?body=${encodeURIComponent(corpsSMS)}`;
 
   } catch (error) {
@@ -1063,8 +1060,6 @@ async function submitForm() {
   }
 }
 </script>
-
 </body>
 </html>
-
 
