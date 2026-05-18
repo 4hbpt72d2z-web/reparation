@@ -1019,21 +1019,59 @@ footer p {
 </a>
 
 <script>
-function submitForm() {
+async function submitForm() {
   const fname = document.getElementById('fname').value.trim();
   const phone = document.getElementById('phone').value.trim();
   const device = document.getElementById('device').value;
   const city = document.getElementById('city').value;
+  const problem = document.getElementById('problem').value.trim();
 
   if (!fname || !phone || !device || !city) {
     alert('Veuillez remplir tous les champs obligatoires.');
     return;
   }
 
-  document.getElementById('theForm').style.display = 'none';
-  document.getElementById('successMsg').style.display = 'block';
+  // 1. ENVOI DU MAIL (Remplace l'URL ci-dessous par ton lien Formspree)
+  const formspreeUrl = https://formspree.io/f/xzdwbnyy
+
+  const formData = {
+    nom: fname,
+    telephone: phone,
+    appareil: device,
+    ville: city,
+    message: problem
+  };
+
+  try {
+    // Envoi invisible au mail
+    fetch(formspreeUrl, {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    // 2. PRÉPARATION DU MESSAGE WHATSAPP/SMS
+    const texteMessage = `Nouvelle demande de réparation :
+Nom: ${fname}
+Tel: ${phone}
+Appareil: ${device}
+Ville: ${city}
+Problème: ${problem}`;
+
+    // Affiche le message de succès sur le site
+    document.getElementById('theForm').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+
+    // Ouvre WhatsApp ou SMS avec le message déjà écrit
+    const whatsappUrl = `https://wa.me/14389259548?text=${encodeURIComponent(texteMessage)}`;
+    window.open(whatsappUrl, '_blank');
+
+  } catch (error) {
+    alert("Une erreur est survenue, mais vous pouvez m'appeler directement au 438 925-9548.");
+  }
 }
 </script>
+
 </body>
 </html>
 
