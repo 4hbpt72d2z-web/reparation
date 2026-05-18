@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réparation Électronique Pro</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Oswald:wght@400;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #000; color: #fff; font-family: 'Oswald', sans-serif; line-height: 1.6; }
+  .container { max-width: 800px; margin: 0 auto; background: #0a0a0f; border: 1px solid #333; position: relative; overflow: hidden; }
+  header { padding: 40px; text-align: center; background: radial-gradient(ellipse at 50% 0%, rgba(0,120,255,0.2), transparent); }
+  h1 { font-family: 'Barlow Condensed', sans-serif; font-size: 70px; line-height: 0.9; text-transform: uppercase; margin-bottom: 10px; }
+  h1 span { color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,0.5); }
+  .hero { background: linear-gradient(135deg, #003fa3, #0055cc); padding: 15px; text-align: center; font-weight: 900; font-size: 24px; text-transform: uppercase; margin: 0 20px; border-radius: 5px; }
+  .services { padding: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+  .card { background: rgba(255,255,255,0.05); border: 1px solid #333; padding: 20px; text-align: center; border-radius: 10px; }
+  .price-box { background: rgba(255,184,0,0.1); border: 2px solid #FFB800; margin: 20px; padding: 20px; text-align: center; border-radius: 10px; }
+  .price-val { font-family: 'Barlow Condensed', sans-serif; font-size: 40px; color: #FFB800; font-weight: 900; }
+  .footer-contact { background: #001a5c; border-top: 3px solid #FFB800; padding: 30px; text-align: center; }
+  .phone { font-family: 'Barlow Condensed', sans-serif; font-size: 50px; color: #FFB800; text-decoration: none; display: block; margin: 10px 0; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <p style="color:#FFB800; letter-spacing:5px;">✦ SERVICE PROFESSIONNEL ✦</p>
+    <h1>RÉPARATION<br><span>ÉLECTRONIQUE</span></h1>
+    <p>TOUS VOS APPAREILS • TOUTES LES MARQUES</p>
+  </header>
+  <div class="hero">N'IMPORTE QUEL APPAREIL — JE LE RÉPARE !</div>
+  <div class="services">
+    <div class="card">🎮<br>CONSOLES</div>
+    <div class="card">🕹️<br>MANETTES</div>
+    <div class="card">💻<br>LAPTOPS</div>
+    <div class="card">📱<br>MOBILES</div>
+    <div class="card">📟<br>TABLETTES</div>
+  </div>
+  <div class="price-box">
+    <p>VOTRE APPAREIL EST BRISÉ ? JE M'EN OCCUPE — 100%.</p>
+    <div class="price-val">40$ – 80$</div>
+    <p>SELON RÉPARATION | DÉLAI 1 À 3 JOURS | GARANTI</p>
+  </div>
+  <div class="footer-contact">
+    <p>CONTACTEZ-MOI</p>
+    <a href="tel:4389259548" class="phone">438 925-9548</a>
+    <p>RENDEZ-VOUS À <strong>MONTRÉAL, LAVAL OU LONGUEUIL</strong></p>
+    <p style="font-size:12px; margin-top:10px;">Prise de rendez-vous à la station de métro la plus proche de vous</p>
+  </div>
+</div>
+</body>
+</html>
